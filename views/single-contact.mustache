@@ -1,0 +1,26 @@
+
+{{#contact}}
+  <h1>{{contact.firstName}} {{contact.lastName}}</h1>
+  <p>
+    Email: {{contact.email}} <br />
+    Phone: {{contact.phone}}
+  </p>
+  <h2>Address</h2>
+  <p>
+    Street: {{contact.street}}  
+  </p>
+  <p>
+    Apt: {{contact.apt}}
+  </p>
+  <p>
+    City: {{contact.city}}
+  </p>
+  <p>
+    State/Province: {{contact.state}}
+  </p>
+  <p>
+    Zip: {{contact.zip}}
+  </p>
+<a href='/contacts'>Contacts</a>
+<a href='/contacts/update/{{_id}}'>Update {{contact.firstName}} {{contact.lastName}}</a>
+{{/contact}}

@@ -7,6 +7,8 @@ var Contact = require('./models/contact');
 var contactsRouter = require('./routes/contacts-router');
 var app = express();
 var port = process.env.PORT || 3000;
+var contactsHtmlController = require('./controllers/htmlController');
+var contactsApiController = require('./controllers/apiController');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -29,18 +31,9 @@ contactsDB.once('open', function() {
   console.log("Connected to contactstest db");
 });
 
-app.get('/contacts', function(req, res) {
-  Contact.find(function(err, contacts) {
-    if(err) {
-      res.send(err);
-    }
-    res.render('contacts', {contacts: contacts});
-  });
-});
-
-app.get('/contacts/add', function(req, res) {
-  res.render('add-contact');
-});
+// Contacts HTML rendering functionality
+contactsHtmlController(app);
+contactsApiController(app);
 
 app.listen(port, function() {
   console.log('Listening on port: ' + port);

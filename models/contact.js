@@ -8,10 +8,10 @@ var ContactSchema = new Schema({
   email: String,
   phone: String,
   street: String,
-  apt: String,
+  apt: Number,
   city: String,
   state: String,
-  zip: String
+  zip: Number 
 });
 
 ContactSchema.methods.firstAndLast = function() {
