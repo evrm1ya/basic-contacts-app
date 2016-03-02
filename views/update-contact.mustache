@@ -1,0 +1,31 @@
+
+<h1>Update</h1>
+{{#contact}}
+<form method='post'>
+  <p>
+    First Name: <br/>
+    <input type='text' name='firstName' value='{{contact.firstName}}' required/>
+  </p>
+  <p>
+    Last Name: <br />
+    <input type='text' name='lastName' value='{{contact.lastName}}' required/>
+  </p>
+  <p>
+    Email: <br />
+    <input type='text' name='email' value='{{contact.email}}' />
+  </p>
+  <p>
+    Phone: <br />
+    <input type='text' name='phone' value='{{contact.phone}}' />
+  </p>
+  <p>
+    Address <br />
+    Street: <input type='text' name='street' value='{{contact.street}}'/> <br />
+    Apt: <input type='number' name='apt' value='{{contact.apt}}'/> <br />
+    City: <input type='text' name='city' value='{{contact.city}}'/> <br />
+    State/Province: <input type='text' name='state' value='{{contact.state}}'/> <br />
+    Zip: <input type='number' name='zip' value='{{contact.zip}}' /> <br />
+  </p>
+  <input type='submit' value='Submit' />
+</form>
+{{/contact}}

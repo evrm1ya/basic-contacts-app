@@ -33,6 +33,7 @@ contactsDB.once('open', function() {
 
 // Contacts HTML rendering functionality
 contactsHtmlController(app);
+// Contacts API related functionality
 contactsApiController(app);
 
 app.listen(port, function() {
